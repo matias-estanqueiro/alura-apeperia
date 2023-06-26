@@ -1,0 +1,655 @@
+/* -------------------------------------------------------- */
+/*                         Bases                            */
+/* -------------------------------------------------------- */
+
+:root{
+    --background-banner-mobile: #00161C;
+    --background-blanco: #FFFFFF;
+    --background-azul-claro: #DFE3F5;
+    --background-ceniza-claro: #F7F4F4;
+    --background-ceniza-medio: #D9D9D9;
+    --border-cabecera-mobile: #103D4A;
+    --boton-rojo: #B72E2E;
+    --fuente-ceniza-claro: #666666;
+    --fuente-ceniza-oscuro: #4F4C4C;
+    --plans-card-start: #035A76;
+    --plans-card-ultra: #690F8E;
+    --plans-card-mega: #B00024;
+    --fuente-enlace: #0006FF;
+    --background-footer: #333333;
+
+    --montserrat: 'Montserrat', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    font-family: var(--open-sans);
+}
+
+header, section {
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.head__link:hover, .footer__link:hover{
+    text-decoration: underline;
+}
+
+.button{
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem 2rem;
+    border: 2px solid var(--boton-rojo);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.button:hover{
+    outline: 0;
+    color: #FFF;
+}
+
+.button:active{
+    outline: 0;
+    color: #FFF;
+}
+
+.button__slide-left{
+    background: linear-gradient(to left, transparent 50%, var(--boton-rojo) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.button__slide-left:hover{
+    background-position: left bottom;
+}
+
+/* -------------------------------------------------------- */
+/*                         Head                             */
+/* -------------------------------------------------------- */
+
+.head{
+    color: var(--background-blanco);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--border-cabecera-mobile);
+    position: absolute;
+}
+
+.head__logo{
+    margin-bottom: 1rem;
+}
+
+.head__nav{
+    text-align: center;
+}
+
+.head__link{
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-right: .7rem;
+    margin-bottom: .7rem;
+    margin-left: .7rem;
+}
+
+/* -------------------------------------------------------- */
+/*                       Banner                             */
+/* -------------------------------------------------------- */
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--background-blanco);
+    text-align: center;
+    background-color: var(--background-banner-mobile);
+    padding-top: 12.25rem;
+    padding-bottom: 2.5rem;
+}
+
+.banner__title{
+    font-family: var(--montserrat);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.banner__text{
+    font-size: 1.25rem;
+    line-height: normal;
+    margin: 0 auto 2.5rem;
+}
+
+.banner__button{
+    width: 100%;
+}
+
+/* -------------------------------------------------------- */
+/*                       Featured                           */
+/* -------------------------------------------------------- */
+
+.featured{
+    background-color: var(--background-azul-claro);
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.featured__title{
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.featured__panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.featured__panel-image{
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px 5px var(--fuente-ceniza-oscuro);
+    margin-bottom: .5rem;
+}
+
+.featured__panel-text{
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.featured__button{
+    font-weight: 700;
+    color: var(--boton-rojo);
+    border-color: var(--boton-rojo);
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------------- */
+/*                      Advantages                          */
+/* -------------------------------------------------------- */
+
+.advantages{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.advantages__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.advantages__item{
+    max-width: 350px;
+    padding: 2rem 0 2rem 5rem;
+    background-repeat: no-repeat;
+    background-position: top 1.25rem left 2.5rem;
+}
+
+.advantages__item-watch{
+    background-image: url(../img/icono-reloj.png);
+}
+
+.advantages__item-money{
+    background-image: url(../img/icono-dinero.png);
+}
+
+.advantages__item-flask{
+    background-image: url(../img/icono-quimica.png);
+}
+
+.item__title{
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.item__text{
+    line-height: normal;
+}
+
+/* -------------------------------------------------------- */
+/*                        About Us                          */
+/* -------------------------------------------------------- */
+
+.about_us{
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.about_us__title{
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.about_us__text{
+    line-height: normal;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.about_us__text--important{
+    font-weight: 700;
+}
+
+.about_us__platforms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.about_us__image{
+    display: none;
+}
+
+/* -------------------------------------------------------- */
+/*                          Plans                           */
+/* -------------------------------------------------------- */
+
+.plans{
+    background-color: var(--background-ceniza-claro);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.plans__title{
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 1.25rem;
+}
+
+.plans__cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-blanco);
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 2px #00000010;
+}
+
+.cards__title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .75rem 0;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid var(--background-azul-claro);
+}
+
+.cards__content{
+    padding: 0 15%;
+}
+
+.cards__price{
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.cards__text{
+    color: var(--fuente-ceniza-claro);
+    line-height: 28px;
+}
+
+.cards__button{
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 100%;
+    align-self: center;
+    padding: .75rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease;
+}
+
+.cards--start{
+    color: var(--plans-card-start);
+}
+
+.cards__boton--start{
+    border-color: var(--plans-card-start);
+}
+
+.button__slide-left-start{
+    background: linear-gradient(to left, transparent 50%, var(--plans-card-start) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.button__slide-left-start:hover{
+    background-position: left bottom;
+}
+
+.cards--ultra{
+    color: var(--plans-card-ultra);
+}
+
+.cards__boton--ultra{
+    border-color: var(--plans-card-ultra);
+}
+
+.button__slide-left-ultra{
+    background: linear-gradient(to left, transparent 50%, var(--plans-card-ultra) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.button__slide-left-ultra:hover{
+    background-position: left bottom;
+}
+
+.cards--mega{
+    color: var(--plans-card-mega);
+}
+
+.cards__boton--mega{
+    border-color: var(--plans-card-mega);
+}
+
+.button__slide-left-mega{
+    background: linear-gradient(to left, transparent 50%, var(--plans-card-mega) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.button__slide-left-mega:hover{
+    background-position: left bottom;
+}
+
+/* -------------------------------------------------------- */
+/*                         Contact                          */
+/* -------------------------------------------------------- */
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.contact__title{
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.contact__button{
+    color: var(--boton-rojo);
+    border-color: var(--boton-rojo);
+    margin-top: 1.25rem;
+
+}
+
+/* -------------------------------------------------------- */
+/*                     Institutional                        */
+/* -------------------------------------------------------- */
+
+.institutional{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--fuente-ceniza-oscuro);
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.institutional__title{
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.institutional__description{
+    margin-bottom: 2rem;
+}
+
+.institutional__address{
+    font-size: 1.5rem;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.institutional__contact{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 2rem;
+}
+
+.institutional__contact-tel{
+    line-height: normal;
+}
+
+.institutional__contact-email{
+    color: var(--fuente-ceniza-oscuro);
+    text-decoration: underline;
+    display: block;
+}
+
+.institutional__video{
+    width: 100%;
+}
+
+/* -------------------------------------------------------- */
+/*                         Footer                           */
+/* -------------------------------------------------------- */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-footer);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer__social-media{
+    display: flex;
+}
+
+.footer__social-icon{
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 2rem 1rem;
+}
+
+.footer__nav{
+    color: var(--background-blanco);
+    font: var(--open-sans);
+    text-align: center;
+    line-height: 3;
+}
+
+.footer__link{
+    display: inline-block;
+    margin: 0 .5rem .7rem;
+}
+
+/* -------------------------------------------------------- */
+/*                       MediaQuerys                        */
+/* -------------------------------------------------------- */
+
+@media screen and (min-width: 576px){
+    .about_us{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px){
+    /* Banner */
+    .banner{
+        padding-top: 10rem;
+    }
+
+    .banner__texto{
+        max-width: 600px;
+    }
+
+    /* Plans */
+    .cards{
+        max-width: 400px;
+    }
+
+    /* Institutional */
+    .institutional__contact-email{
+        display: inline-block;
+    }
+
+    .institutional__video{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    /* Bases */
+    .container{
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
+
+    /* Head */
+    .head{
+        flex-direction: row;
+        justify-content: space-between;
+        border: none;
+    }
+
+    /* Banner */
+    .banner{
+        background-image: url(../img/bg-intro.jpg);
+        background-size: cover;
+        padding-top: 8.25rem;
+    }
+
+    .banner__title{
+        font-size: 3.25rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Advantages */
+    .advantages{
+        background-color: var(--background-ceniza-claro);
+    }
+    .advantages__list{
+        justify-content: space-around;
+    }
+
+    /* About Us */
+    .about_us{
+        display: flex;
+    }
+
+    .about_us__contenido{
+        margin-right: 3rem;
+    }
+
+    .about_us__title{
+        text-align: left;
+    }
+
+    .about_us__texto--division{
+        border-bottom: 1px solid var(--background-ceniza-medio);
+
+        padding-bottom: 1.5rem;
+    }
+
+    .about_us__image{
+        display: block;
+    }
+
+    /* Plans */
+    .plans__cards{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .cards{
+        max-width: 300px;
+    }
+
+    /* Institutional */
+    .institutional__content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+    
+    .institutional__contact-email{
+        display: block;
+    }
+
+    .institutional__video{
+        align-self: flex-end;
+        width: 375px;
+    }
+
+    /* Footer */
+    .footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer__nav{
+        text-align: left;
+        min-width: 600px;
+    }
+}
